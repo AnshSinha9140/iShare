@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share app</title>
+
+    <!--  <link rel="stylesheet" href="./style.css">-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./public/style.css" />
+
+    <script
+      defer
+      src="https://socket-servers.herokuapp.com/socket.io/socket.io.js"
+    ></script>
+
+    <script defer src="client.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid main-container">
+      <div class="row">
+        <div class="text-chatContainer col-md-5">
+          <div class="tcontainer"></div>
+
+          <div class="container">
+            <div class="row">
+              <form id="send-container">
+                <textarea
+                  id="messageInp"
+                  name="messageInp"
+                  placeholder="enter text here"
+                >
+                </textarea>
+                <button type="submit" class="btns">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- yha se image wala shuru horha hai-->
+        <div class="col-md-1">
+          <div class="vertical"></div>
+        </div>
+
+        <div class="imagesendContainer col-md-5">
+          <div class="form-div" id="form-div">
+            <form
+              id="main-from"
+              method="POST"
+              action="/sendImage"
+              enctype="multipart/form-data"
+            >
+              <div>
+                <input
+                  type="file"
+                  id="files"
+                  name="userfile"
+                  accept="image/*"
+                  onchange="loadfile(event)"
+                />
+                <label id="labels" for="files"> Choose a photo</label>
+                <div class="fingerprint scanning">
+                  <img
+                    id="output"
+                    src="./public/photo.png"
+                    class="img-upload"
+                  />
+                </div>
+              </div>
+              <div>
+                <input
+                  type="submit"
+                  id="button-analyze"
+                  name="Analyze"
+                  value="Send"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

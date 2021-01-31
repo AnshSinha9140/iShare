@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barcode</title>
+    <link rel="stylesheet" , href="../style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function generateQr() {
+        var inner = document.getElementById("main-text").innerText;
+
+        var imagi = document.getElementById("imaji");
+
+        imagi.setAttribute("src", inner);
+      }
+    </script>
+  </head>
+  <body onload="generateQr()">
+    <div class="contactForm">
+      <form action="/sharefiles" method="GET">
+        <h4 id="pass">hey,<%= newdata %></h4>
+
+        <h2 id="qrhead">Please Scan the QrCode</h2>
+
+        <div id="qrcode">
+          <h5 id="main-text"><%= hahah %></h5>
+
+          <img id="imaji" />
+        </div>
+
+        <div>
+          <button type="submit" id="btnn" class="btn">Next</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

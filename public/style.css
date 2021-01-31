@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  min-height: 100vh;
+  background: #f8f8f8;
+  margin-top: 50px;
+}
+
+.tcontainer {
+  background-color: #002a3f;
+  overflow-y: auto;
+  padding: 20px;
+  height: 75vh;
+  width: 620px;
+
+  border-radius: 8px;
+}
+.vertical {
+  border-left: 3px solid black;
+  height: 75vh;
+  position: absolute;
+  left: 50%;
+}
+.text-chatContainer {
+  margin-left: 60px;
+}
+.message {
+  background-color: grey;
+  width: 24%;
+  padding: 10px;
+  margin: 17px 12px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.left {
+  float: left;
+  clear: both;
+  width: auto;
+  background-color: #f7b828;
+}
+
+.right {
+  float: right;
+  clear: both;
+  width: auto;
+  background-color: #fff;
+}
+#send-container {
+  width: 500px;
+}
+.send {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#sbtn {
+  height: 40px;
+  cursor: pointer;
+  width: 100px;
+  border: solid 1.3px black;
+  background-color: #2196f3;
+  color: #f8f8f8;
+  font-size: 18px;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+#btnn {
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  position: absolute;
+  left: 38%;
+  height: 40px;
+  top: 82%;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 17px;
+  width: 130px;
+  background-color: #2196f3;
+}
+#messageInp {
+  border: 2px solid black;
+  margin-top: 15px;
+  border-radius: 6px;
+  margin-left: 20px;
+  width: 480px;
+  height: 40px;
+}
+.btns {
+  width: 120px;
+  height: 40px;
+  background-color: #2196f3;
+  position: absolute;
+  top: 92.3%;
+  left: 79%;
+  color: white;
+  tab-size: 18px;
+}
+textarea {
+  width: 390px;
+  margin: 0;
+}
+.inContainer {
+  padding: 0;
+  margin: 0;
+}
+
+#btn {
+  height: 40px;
+  width: 120px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.contactForm {
+  width: 40%;
+  padding: 40px;
+  height: 55vh;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 150px;
+  left: 30%;
+}
+
+.contactForm h3 {
+  font-size: 35px;
+  color: #333;
+  font-weight: 500;
+}
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #2196f3;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contactForm .inputBox .bt {
+  width: 100px;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+/*barcode*/
+
+#imaji {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: 30%;
+}
+
+#main-text {
+  opacity: 0;
+}
+#qrhead {
+  text-align: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+/*Main Container**/
+.main-container {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+/*baad k form ka material*/
+.form-div {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  min-width: 570px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: auto;
+  min-height: 540px;
+  width: auto;
+  margin: auto;
+}
+
+.img-upload {
+  height: 270px;
+  width: 270px;
+  align-items: center;
+  margin-top: 65px;
+  border-radius: 5px;
+}
+#main-from {
+  height: 100%;
+}
+#button-analyze {
+  background-color: #f5af09;
+  border: none;
+  position: absolute;
+  justify-content: center;
+  color: white;
+  height: 45px;
+  width: 150px;
+  left: 51%;
+  top: 57%;
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+}
+
+#labels {
+  position: absolute;
+  left: 25%;
+  background-color: #f5af09;
+  display: flex;
+  color: white;
+  font-size: 18px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 45px;
+  width: 150px;
+  top: 57%;
+}
